@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="dathard" translate="label" sortOrder="10">
+            <label>Dathard</label>
+        </tab>
+        <section id="telegram2fa" translate="label" sortOrder="1" showInDefault="1">
+            <label>Telegram 2FA</label>
+            <tab>dathard</tab>
+            <resource>Dathard_Telegram2FA::config</resource>
+            <group id="base" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0">
+                <frontend_model>Dathard\Base\Block\Adminhtml\System\Config\Messages</frontend_model>
+            </group>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1">
+                    <label>Enable logs cleaning</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="30" showInDefault="1">
+                    <label>API key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

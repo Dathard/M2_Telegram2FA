@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<extensions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="urn:magento:module:Dathard_Base:etc/extensions.xsd">
+    <extension name="Telegram2FA"
+               config_section = "telegram2fa"
+               repository_name=""/>
+</extensions>

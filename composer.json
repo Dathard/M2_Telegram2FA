@@ -1,0 +1,20 @@
+{
+    "name": "dathard/module-telegram2fa",
+    "version": "1.0.0",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Dathard",
+            "email": "dathard@yahoo.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Dathard\\Telegram2FA\\": ""
+        }
+    }
+}
