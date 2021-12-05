@@ -75,8 +75,10 @@ class TelegramBotApi
         }
 
         $response = json_decode($response['body'], true);
+        $result = $response['result'];
+        $result['url'] = "https://t.me/{$result['username']}";
 
-        return $this->convertToDataObject($response['result']);
+        return $this->convertToDataObject($result);
     }
 
     /**
