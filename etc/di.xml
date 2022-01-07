@@ -1,4 +1,28 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Dathard\Telegram2FA\Api\CustomerManagementInterface" type="Dathard\Telegram2FA\Model\CustomerManagement"/>
+
+    <!-- System 2FA providers list -->
+    <type name="MSP\TwoFactorAuth\Api\ProviderPoolInterface">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="telegram" xsi:type="object">Dathard\Telegram2FA\Model\Provider</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Dathard\Telegram2FA\Model\Provider" type="MSP\TwoFactorAuth\Model\Provider">
+        <arguments>
+            <argument name="engine" xsi:type="object">Dathard\Telegram2FA\Model\Engine</argument>
+            <argument name="code" xsi:type="string">telegram</argument>
+            <argument name="name" xsi:type="string">Telegram Authenticator</argument>
+            <argument name="icon" xsi:type="string">Dathard_Telegram2FA::images/telegram.png</argument>
+            <argument name="configureAction" xsi:type="string">dttelegram2fa/auth/configure</argument>
+            <argument name="authAction" xsi:type="string">dttelegram2fa/auth/index</argument>
+            <argument name="extraActions" xsi:type="array">
+                <item name="authpost" xsi:type="string">dttelegram2fa/authpost</item>
+            </argument>
+            <argument name="canReset" xsi:type="boolean">false</argument>
+        </arguments>
+    </virtualType>
 </config>

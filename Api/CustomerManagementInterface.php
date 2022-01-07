@@ -9,5 +9,5 @@ interface CustomerManagementInterface
     /**
      * @return string
      */
-    public function updateData();
+    public function updateChatsData();
 }

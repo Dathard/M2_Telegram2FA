@@ -11,7 +11,7 @@ class CustomerManagement implements CustomerManagementInterface
     /**
      * @inheritDoc
      */
-    public function updateData()
+    public function updateChatsData()
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $request = $objectManager->get(\Magento\Framework\App\RequestInterface::class);
