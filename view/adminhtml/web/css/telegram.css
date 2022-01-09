@@ -1,0 +1,21 @@
+.msp-tfa-telegram-qr
+{
+    display: block;
+
+    width: 300px;
+    height: 300px;
+    margin: 0  auto 3em auto;
+}
+
+.msp-tfa-telegram-secure-code
+{
+    font-weight: 600;
+
+    padding: 7px;
+
+    text-align: center;
+    word-wrap: break-word;
+
+    border: 1px solid #ccc;
+    background: #fffbbb;
+}

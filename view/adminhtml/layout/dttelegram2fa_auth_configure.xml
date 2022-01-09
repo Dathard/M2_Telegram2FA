@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="admin_login" />
+
+    <head>
+        <css src="MSP_TwoFactorAuth::css/auth.css"/>
+        <css src="Dathard_Telegram2FA::css/telegram.css"/>
+    </head>
+
+    <body>
+        <referenceContainer name="login.content">
+            <block class="Dathard\Telegram2FA\Block\Provider\Configure" name="content" template="MSP_TwoFactorAuth::msp_twofactorauth/provider/auth.phtml">
+
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="msp-twofactorauth-auth" xsi:type="array">
+                                <item name="component" xsi:type="string">Dathard_Telegram2FA/js/configure</item>
+                                <item name="children" xsi:type="array">
+                                    <item name="msp-twofactorauth-trust-device" xsi:type="array">
+                                        <item name="component" xsi:type="string">MSP_TwoFactorAuth/js/trust_device</item>
+                                        <item name="displayArea" xsi:type="string">trust-device</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+
+                <block class="MSP\TwoFactorAuth\Block\ChangeProvider" name="change-provider"
+                       template="MSP_TwoFactorAuth::msp_twofactorauth/change_provider.phtml">
+
+                    <arguments>
+                        <argument name="provider" xsi:type="string">google</argument>
+                        <argument name="jsLayout" xsi:type="array">
+                            <item name="components" xsi:type="array">
+                                <item name="msp-twofactorauth-change-provider" xsi:type="array">
+                                    <item name="component" xsi:type="string">MSP_TwoFactorAuth/js/change_provider</item>
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
