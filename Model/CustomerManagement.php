@@ -6,6 +6,9 @@ namespace Dathard\Telegram2FA\Model;
 
 use Dathard\Telegram2FA\Api\CustomerManagementInterface;
 
+/**
+ * @since 1.0.0
+ */
 class CustomerManagement implements CustomerManagementInterface
 {
     /**

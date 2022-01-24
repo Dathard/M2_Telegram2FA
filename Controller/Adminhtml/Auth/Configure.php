@@ -8,6 +8,9 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use MSP\TwoFactorAuth\Controller\Adminhtml\AbstractAction;
 
+/**
+ * @since 1.0.0
+ */
 class Configure extends AbstractAction
 {
     /**

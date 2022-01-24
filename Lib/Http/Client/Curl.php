@@ -6,6 +6,9 @@ namespace Dathard\Telegram2FA\Lib\Http\Client;
 
 use Magento\Framework\HTTP\Client\Curl as CurlClient;
 
+/**
+ * @since 1.0.0
+ */
 class Curl extends CurlClient
 {
     /**

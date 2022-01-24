@@ -6,6 +6,9 @@ namespace Dathard\Telegram2FA\Model;
 
 use Magento\User\Api\Data\UserInterface;
 
+/**
+ * @since 1.0.0
+ */
 class Verification
 {
     /**

@@ -8,6 +8,9 @@ use Magento\Framework\DataObject;
 use Magento\User\Api\Data\UserInterface;
 use MSP\TwoFactorAuth\Api\EngineInterface;
 
+/**
+ * @since 1.0.0
+ */
 class Engine implements EngineInterface
 {
     const CODE = 'telegram';

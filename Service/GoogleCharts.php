@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Dathard\Telegram2FA\Service;
 
+/**
+ * @since 1.0.0
+ */
 class GoogleCharts
 {
     const ROOT_URL = 'https://chart.googleapis.com/chart';

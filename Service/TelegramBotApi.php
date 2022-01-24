@@ -11,6 +11,9 @@ use Magento\Framework\DataObjectFactory;
 use Magento\Framework\Webapi\Rest\Request;
 use Psr\Log\LoggerInterface;
 
+/**
+ * @since 1.0.0
+ */
 class TelegramBotApi
 {
     const API_REQUEST_URI = 'https://api.telegram.org/bot';
@@ -52,11 +55,13 @@ class TelegramBotApi
 
     /**
      * @param string $apiKey
-     * @return void
+     * @return $this
      */
-    public function setApiKey(string $apiKey): void
+    public function setApiKey(string $apiKey): TelegramBotApi
     {
         $this->apiKey = $apiKey;
+
+        return $this;
     }
 
     /**

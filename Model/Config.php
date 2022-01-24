@@ -6,6 +6,9 @@ namespace Dathard\Telegram2FA\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
+/**
+ * @since 1.0.0
+ */
 class Config
 {
     const XML_PATH_ENABLED = 'msp_securitysuite_twofactorauth/telegram/enabled';
